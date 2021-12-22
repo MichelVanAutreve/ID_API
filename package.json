@@ -7,9 +7,9 @@
     "clean": "rimraf dist",
     "compile": "node-sass --output-style=expanded --source-map=true scss/screen.scss dist/screen.css",
     "prefix": "postcss dist/screen.css -u postcss-prefixer -o dist/screen.css",
-    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output dist/screen.min.css dist/screen.css",
+    "minify": "cleancss -O1 --source-map --source-map-inline-sources --output dist/screen.min.css dist/screen.css",
     "dev": "npm run compile -- --watch",
-    "build": "npm run clean && npm run compile && npm run prefix && npm run minify && webpack"
+    "build": "npm run clean && npm run compile && npm run prefix && npm run minify && webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "Micro",
     "Interactions"
   ],
-  "author": "Michel Van Autrève",
+  "author": "Michel Van Autrève <michel.vanautreve@outlook.com> (https://michelvanautreve.be/",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MichelVanAutreve/ID_API/issues"
@@ -44,5 +44,10 @@
     "postcss-prefixer": "^2.1.3",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0"
+  },
+  "dependencies": {
+    "globe.gl": "^2.22.8",
+    "normalize.css": "^8.0.1",
+    "three": "^0.133.1"
   }
 }
