@@ -89,7 +89,9 @@ p {
   z-index: 999;
   color: white;
   font-size: 16px;
-  top: 1rem;
+  top: auto;
+  bottom: 1rem;
+  max-height: 30rem;
   left: 1rem;
   display: grid;
   grid-auto-columns: 1fr;
@@ -108,6 +110,10 @@ p {
     "rotationSpeed Speed";
 }
 
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+
 .title {
   grid-area: title;
 }
@@ -119,10 +125,6 @@ p {
 .controls {
   grid-area: controls;
 }
-
-/*------------------------------------*\
-#UTILITIES
-\*------------------------------------*/
 
 /*------------------------------------*\
 #MEDIA
@@ -140,13 +142,17 @@ p {
 No media query since this is the default in mobile first design
 */
 
-/* Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
-*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
 
-/* Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
-*/
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .c-card {
+    top: 1rem;
+    bottom: auto;
+  }
+}
 
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
