@@ -79,9 +79,9 @@ p {
 }
 
 .c-card {
-  backdrop-filter: blur(3px) saturate(180%);
+  backdrop-filter: blur(7px) saturate(180%);
   -webkit-backdrop-filter: blur(7px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.1);
+  background-color: rgba(17, 25, 40, 0.2);
   border-radius: var(--global-borderRadius);
   border: var(--global-borderWidth) solid var(--global-borderColor);
   padding: 1rem 1.5rem;
@@ -89,8 +89,9 @@ p {
   z-index: 999;
   color: white;
   font-size: 16px;
-  top: auto;
-  bottom: 1rem;
+  top: 1rem;
+  width: calc(100% - 2rem);
+  right: 1rem;
   max-height: 30rem;
   left: 1rem;
   display: grid;
@@ -144,15 +145,16 @@ No media query since this is the default in mobile first design
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
   .c-card {
     top: 1rem;
-    bottom: auto;
+    min-width: 30rem;
+    max-width: 38rem;
   }
 }
+
+/* Medium devices (tablets, 768px and up) 
+@media (min-width: 768px) {
+}/*
 
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
