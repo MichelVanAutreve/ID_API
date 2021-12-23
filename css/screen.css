@@ -1,18 +1,157 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+  /* colors */
+  --global-color-dark: rgb(0, 1, 20);
+  --global-color-white: #fff;
+
+  /* borders */
+  --global-borderRadius: 12px;
+  --global-borderWidth: 1px;
+  --global-borderColor: rgba(255, 255, 255, 0.125);
+}
+
+/*------------------------------------*\
+#GENERIC
+\*------------------------------------*/
+
+/*
+  Generic: Page
+  ---
+  Global page styles + universal box-sizing:
+*/
+
+html {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-  margin: 0;
   min-height: 100vh;
+  background-color: var(--global-color-dark);
 }
 
-.card {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  padding: 20px;
-  position: absolute;
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+h1 {
+  font-size: 1.6rem;
+  text-align: center;
 }
 
-.globe {
+h2 {
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+
+.c-globe {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
+
+.c-card {
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(7px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.1);
+  border-radius: var(--global-borderRadius);
+  border: var(--global-borderWidth) solid var(--global-borderColor);
+  padding: 1rem 1.5rem;
+  position: absolute;
+  z-index: 999;
+  color: white;
+  font-size: 16px;
+  top: 1rem;
+  left: 1rem;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title title"
+    "name nameInput"
+    "launchDate launchInput"
+    "coordinates coordinates"
+    "latitude latInput"
+    "longitude longInput"
+    "altitude altInput"
+    "controls controls"
+    "rotationSpeed Speed";
+}
+
+.title {
+  grid-area: title;
+}
+
+.coordinates {
+  grid-area: coordinates;
+}
+
+.controls {
+  grid-area: controls;
+}
+
+/*------------------------------------*\
+#UTILITIES
+\*------------------------------------*/
+
+/*------------------------------------*\
+#MEDIA
+\*------------------------------------*/
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
