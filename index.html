@@ -34,8 +34,8 @@
       content="/assets/img/favicon/browserconfig.xml"
     />
     <meta name="theme-color" content="#172662" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/screen.css" />
-    <!--<script defer type="module" src="js/scripts.js"></script>-->
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
@@ -45,7 +45,34 @@
     <title>StarLink</title>
   </head>
   <body>
-    <header class="globe"></header>
-    <!--<div class="card">Hallo ik ben michel</div>-->
+    <div class="c-globe"></div>
+    <div class="c-card">
+      <div class="title"><h1>StarLink Satellite Info</h1></div>
+      <div class="name">Name:</div>
+      <div class="nameInput">...</div>
+      <div class="launchDate">Launch date:</div>
+      <div class="launchInput">...</div>
+      <div class="coordinates"><h2>Coordinates</h2></div>
+      <div class="latitude">Latitude:</div>
+      <div class="latInput">...</div>
+      <div class="longitude">Longitude:</div>
+      <div class="longInput">...</div>
+      <div class="altitude">Altitude:</div>
+      <div class="altInput">...</div>
+      <div class="controls"><h2>Control globe</h2></div>
+      <div class="rotationSpeed">Rotation speed</div>
+      <div class="speed">
+        <input
+          type="range"
+          name="rotation"
+          id="rotation"
+          class="rotationInput"
+          min="0.1"
+          max="2"
+          step="0.01"
+          value="0.1"
+        />
+      </div>
+    </div>
   </body>
 </html>
